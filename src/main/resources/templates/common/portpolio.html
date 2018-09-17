@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div th:fragment="frag_portpolio">
+	<div id="port"class="container"
+		style="margin-top: 50px; background-color: white; height: 870px; text-align: center;">
+
+		<p>
+			<font size="40" color="#0B3861">포트폴리오</font>
+		</p>
+		<div align="center">
+				<hr style="display:inline-block;border: solid 3px #0B3861; width:10%;"/>
+				<p style=" display:inline-block;"><font size="20" color="#0B3861">☆</font></p>
+				<hr style=" display:inline-block;border: solid 3px #0B3861; width:10%;"/>
+				
+		</div>
+
+		<!-- 기존 이미지 -->
+		<img id="origin"
+			style="border: 2px solid #000;margin-top: 100px; width: 500px; height: 300px;"
+			onmouseover="this.src='images/extends.jpg'"
+			onmouseout="this.src='images/1page.png'" src="images/1page.png" />
+		
+		<!-- 팝업 이미지 -->
+		<div id="pop" style="width: 1200px; height: 2000px; background: white; color: black; position: absolute; right: 200px; top: 1050px; text-align: center; border: 2px solid #000;">
+			<div id="close" style="width: 100%; text-align:right;"><img style="width:50px;"src="images/x.png"/></div>
+			
+			<!-- 문제은행 -->
+			<div style="margin-bottom:50px;"><p><font size="40" color="#0B3861">문제은행</font></p>
+			<div align="center">
+				<hr style="display:inline-block;border: solid 3px #0B3861; width:10%;"/>
+				<p style=" display:inline-block;"><font size="20" color="#0B3861">☆</font></p>
+				<hr style=" display:inline-block;border: solid 3px #0B3861; width:10%;"/>
+				</div>
+			
+			</div>
+			
+			<div style="align:center;margin:20px 230px; ">
+			
+			<img style="width:350px; height:350px;"src="polio/1.png" />
+			<img style="width:350px; height:350px;"src="polio/2.png" />
+			<img style="width:350px; height:350px;"src="polio/3.png" />
+			<img style="width:350px; height:350px;"src="polio/4.png" />
+			<img style="width:350px; height:350px;"src="polio/5.png" />
+			<p>소개</p>
+			<br>문제를 맞추고 풀고 기록도 남는 문제은행입니다.<br>
+			<br><br>
+			<span>내용</span>
+			<br>
+			<br>
+			<span style='line-height:200%'>1. 문제를 출제하며</span><br>
+			<span style='line-height:200%'>2. 시험보기를 하여 테스를 실행 할 수 있으며</span><br>
+			<span style='line-height:200%'>3. 채점도 할 수 있습니다.</span><br>
+			<span style='line-height:200%'>4. 게시판에 글도 남길 수 있고 댓글도 달 수 있습니다.</span><br>
+			<br><br>
+			<span style='line-height:200%'>Language : Java</span><br>
+			<span style='line-height:200%'>Platform : Spring boot</span><br>
+			<span style='line-height:200%'>Protocol : HTTP, JSON</span><br>
+			<span style='line-height:200%'>Frontend : Bootstrap</span><br>
+			
+			
+
+			<button class="btn btn-info" style="margin-top:100px; font-size:20px;" onclick="$('#pop').hide();">X Close</button>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#pop').hide();
+
+	});
+
+	$(document).ready(function() {
+		$('#close').click(function() {
+			$('#pop').hide();
+		});
+	});
+	
+	$(document).ready(function() {
+		$('#origin').click(function() {
+
+			$('#pop').show();
+			
+		});
+	});
+</script>
+</div>
+</body>
+</html>
+

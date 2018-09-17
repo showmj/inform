@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div th:include="common/top::frag_top"></div>
+	<div th:include="common/my::frag_my"></div>
+	<div th:include="common/portpolio::frag_portpolio"></div>	
+	<div th:include="common/about::frag_about"></div>
+	<div id="con"class="container" style="background-color: white; height: 730px; text-align: center;">
+		<div align="center" style="margin-top:60px;">
+			<p><font size="40"style="font-weight:bold;"color="#0B3861">CONTACT ME</font></p>
+					
+				<hr style="display:inline-block;border: solid 3px #0B3861; width:10%;"/>
+				<span style=" display:inline-block;"><font size="20" color="#0B3861">☆</font></span>
+				<hr style=" display:inline-block;border: solid 3px #0B3861; width:10%;"/>
+					
+					
+		</div>		
+		<div>		
+				<form action="email" method="post">
+				<input type="text" style="font-size:20pt;border:none;"size="50" placeholder="이름" name="text1"/><hr width="670"><br><br>
+				<input type="text" style="font-size:20pt;border:none;"size="50" placeholder="이메일" name="text2"/><hr width="670"><br><br>
+				<input type="text" style="font-size:20pt;border:none;"size="50" placeholder="내용" name="text3"/><hr width="670"><br><br>
+				<input type="text" style="font-size:20pt;border:none;"size="50" placeholder="연락처" name="text4"/><hr width="670">
+					
+				<input type="submit" class="btn btn-info" style="margin-top:20px;position:absolute; left:460px;font-size:20px; width:100px; height:60px;" value="전송"/>
+					
+				</form>
+		</div>		
+					
+					
+	</div>			
+</body>				
+</html>				
